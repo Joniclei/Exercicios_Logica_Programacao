@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
+    <title>Ex4</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form action="">
+        <fieldset>
+          <legend>Exercicio04</legend>
+          <label for="idValorA" class="espacoForms">Nota 1 :</label>
+          <input
+            type="text"
+            id="idValorA"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+          <label for="idValorB" class="espacoForms">Nota 2 :</label>
+          <input
+            type="text"
+            id="idValorB"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+
+          <button type="button" id="btnNome" onclick="resNome()">
+            Clique Aqui
+          </button>
+          <output id="idResNome"></output>
+        </fieldset>
+      </form>
+
+      <script>
+        function resNome() {
+          let valorA = document.getElementById("idValorA").value;
+          let valorB = document.getElementById("idValorB").value;
+
+          let resultado = (Number(valorA) + Number(valorB)) / 2;
+
+          document.getElementById(
+            "idResNome"
+          ).value = `A média entre ${valorA} e ${valorB} é igual a ${resultado} `;
+        }
+      </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>

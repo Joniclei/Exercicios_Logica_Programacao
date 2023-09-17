@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
+    <title>Ex2</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form action="">
+        <fieldset>
+          <legend>Exercicio02</legend>
+          <label for="idNomeFuncio" class="espacoForms"
+            >Nome do Funcionário:</label
+          >
+          <input
+            type="text"
+            id="idNomeFuncion"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+          <label for="idSalario" class="espacoForms">Slario:</label>
+          <input
+            type="text"
+            id="idSalario"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+
+          <button type="button" id="btnNome" onclick="resNome()">
+            Clique Aqui
+          </button>
+          <output id="idResNome"></output>
+        </fieldset>
+      </form>
+
+      <script>
+        function resNome() {
+          let nome = document.getElementById("idNomeFuncion").value;
+          let salario = document.getElementById("idSalario").value;
+
+          document.getElementById(
+            "idResNome"
+          ).value = `O funcionário ${nome} tem um salário de R$${salario} em Junho.`;
+        }
+      </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>

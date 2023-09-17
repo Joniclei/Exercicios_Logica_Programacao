@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
+    <title>Ex01</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form action="">
+        <fieldset>
+          <legend>Exercicio01</legend>
+          <label for="idNome" class="espacoForms">Qual é o seu nome?:</label>
+          <input
+            type="text"
+            id="idNome"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+          <button type="button" id="btnNome" onclick="resNome()">Clique Aqui</button>
+          <input id="idResNome"></input>
+        </fieldset>
+      </form>
+
+      <script>
+
+        function resNome(){
+
+          let nome = document.getElementById('idNome').value;
+
+          document.getElementById("idResNome").value = `Olá ${nome}, é um prazer te conhecer!`;
+        }
+      </script>
+    </main>
+   <footer></footer>
+  </body>
+</html>

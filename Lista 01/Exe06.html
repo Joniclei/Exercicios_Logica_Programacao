@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
+    <title>Ex6</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form action="">
+        <fieldset>
+          <legend>Exercicio06</legend>
+          <label for="idValorA" class="espacoForms">Digite um número:</label>
+          <input
+            type="text"
+            id="idValorA"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+
+          <button type="button" id="btnNome" onclick="resNome()">
+            Clique Aqui
+          </button>
+          <output id="idResDobro"></output>
+          <br>
+          <output id="idResDiv3"></output>
+        </fieldset>
+      </form>
+
+      <script>
+        function resNome() {
+          let valorA = document.getElementById("idValorA").value;
+
+
+          let dobro = Number(valorA) * 2;
+          let div3 = Number(valorA)/3;
+          document.getElementById(
+            "idResDobro"
+          ).value = `O dobro de ${valorA}  é  ${dobro} `;
+          document.getElementById("idResDiv3").value = `A terca parte de ${valorA} é ${div3}`;
+        }
+
+     </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>

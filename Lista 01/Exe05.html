@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
+    <title>Ex5</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form action="">
+        <fieldset>
+          <legend>Exercicio05</legend>
+          <label for="idValorA" class="espacoForms">Digite um número:</label>
+          <input
+            type="text"
+            id="idValorA"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+
+          <button type="button" id="btnNome" onclick="resNome()">
+            Clique Aqui
+          </button>
+          <output id="idResAnt"></output>
+          <br>
+          <output id="idResSuc"></output>
+        </fieldset>
+      </form>
+
+      <script>
+        function resNome() {
+          let valorA = document.getElementById("idValorA").value;
+          let antecessor = Number(valorA) -1;
+          let sucessor= Number(valorA) + 1;
+
+          document.getElementById(
+            "idResAnt"
+          ).value = `O antecessor de ${valorA}  é ${antecessor} `;
+          document.getElementById(
+            "idResSuc"
+          ).value = `O sucessor de ${valorA}  é ${sucessor} `;
+        }
+      </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>
