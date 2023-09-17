@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
+    <title>Ex9</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form action="">
+        <fieldset>
+          <legend>Exercicio09</legend>
+          <label for="idLargura" class="espacoForms"
+            >Largura:</label
+          >
+          <input
+            type="text"
+            id="idLargura"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+          <label for="idAltura" class="espacoForms"
+            >Altura:</label
+          >
+          <input
+            type="text"
+            id="idAltura"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+
+          <button type="button" id="btnNome" onclick="resNome()">
+            Clique Aqui
+          </button>
+
+
+          <p id="idRes"></p>
+        </fieldset>
+      </form>
+
+      <script>
+        function resNome() {
+          let vAltura = Number(document.getElementById("idAltura").value);
+          let vLargura = Number(document.getElementById("idLargura").value);
+          console.log(vAltura);
+          console.log(vLargura);
+          document.getElementById(
+            "idRes"
+          ).textContent = `A area a ser pintada é ${vAltura*vLargura} e precisa de${(vAltura*vLargura)/2} litros de tinta`;
+        }
+      </script>
+    </main>
+    <footer></footer>
+  </body>
+</html>

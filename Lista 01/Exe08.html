@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
-    <title>Ex7</title>
+    <title>Ex8</title>
   </head>
   <body>
     <header></header>
     <main>
       <form action="">
         <fieldset>
-          <legend>Exercicio07</legend>
+          <legend>Exercicio08</legend>
           <label for="idValorA" class="espacoForms"
-            >Digite uma distância em metros:</label
+            >Quantos reais voce tem:</label
           >
           <input
             type="text"
@@ -29,7 +29,7 @@
           </button>
 
           <!-- Usando H1-->
-          <h1 id="idRes"></h1>
+          <p id="idRes"></p>
         </fieldset>
       </form>
 
@@ -39,8 +39,7 @@
 
           document.getElementById(
             "idRes"
-          ).textContent = `A distância de ${valorA}m corresponde a: \n ${valorA/1000}Km \n${valorA/100}Hm \n ${valorA/10}Dam \n
-          ${valorA *10}dm \n ${valorA*100}cm \n${valorA*1000}mm`;
+          ).textContent = `O valor em R$${valorA} corresponde a:$${valorA/3.45}`;
         }
       </script>
     </main>
