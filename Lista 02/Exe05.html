@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
+    <title>Ex05</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form action="">
+        <fieldset>
+          <legend>Exercicio05</legend>
+          <label for="idPrimeiro" class="espacoForms">Digite o primeir numero:</label>
+          <input
+            type="text"
+            id="idPrimeiro"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+          <br>
+          <label for="idSegundo" class="espacoForms">Digite o segundo numero:</label>
+          <input
+            type="text"
+            id="idSegundo"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+          <br>
+          <label for="idTerceiro" class="espacoForms">Digite o terceiro numero:</label>
+          <input
+            type="text"
+            id="idTerceiro"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+          <br>
+          <button type="button" id="btnNome" onclick="resNome()">Clique Aqui</button>
+          <br>
+          <input id="idResultado"></input>
+        </fieldset>
+      </form>
+
+      <script>
+
+        function resNome(){
+
+          let nA = Number(document.getElementById('idPrimeiro').value);
+          let nB = Number(document.getElementById('idSegundo').value);
+          let nC = Number(document.getElementById('idTerceiro').value);
+          if (nA > nB && nA > nC){
+            if(nB > nC){
+              document.getElementById("idResultado").value = `Ordem decrescente ${nA} , ${nB} , ${nC} `;
+            } else{
+              document.getElementById("idResultado").value = `Ordem decrescente ${nA} , ${nC} , ${nB}`;
+            }
+          }else if (nB > nA && nB > nC){
+            if(nA > nC){
+              document.getElementById("idResultado").value = `Ordem decrescente ${nB} , ${nA} , ${nC} `;
+            } else{
+              document.getElementById("idResultado").value = `Ordem decrescente ${nB} , ${nC} , ${nA}`;
+            }
+          }else {
+            if(nB > nA){
+              document.getElementById("idResultado").value = `Ordem decrescente ${nC} , ${nB} , ${nA} `;
+            } else{
+              document.getElementById("idResultado").value = `Ordem decrescente ${nC} , ${nA} , ${nB}`;
+            }
+          }
+        }
+
+      </script>
+    </main>
+   <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
+    <title>Ex03</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form action="">
+        <fieldset>
+          <legend>Exercicio03</legend>
+          <label for="idNumber" class="espacoForms">Digite um numero:</label>
+          <input
+            type="text"
+            id="idNumber"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+          <button type="button" id="btnNome" onclick="resNome()">Clique Aqui</button>
+          <br>
+          <input id="idResultado"></input>
+        </fieldset>
+      </form>
+
+      <script>
+
+        function resNome(){
+
+          let nA = Number(document.getElementById('idNumber').value);
+
+          if (nA == 20){
+            document.getElementById("idResultado").value = `Valor igual a 20`
+          }else if (nA > 20){
+            document.getElementById("idResultado").value = `Valor maior que 20`;
+          } else{
+            document.getElementById("idResultado").value = `Valor menor que 20`;
+
+          }
+        }
+      </script>
+    </main>
+   <footer></footer>
+  </body>
+</html>

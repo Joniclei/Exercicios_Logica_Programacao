@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
+    <title>Ex02</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form action="">
+        <fieldset>
+          <legend>Exercicio02</legend>
+          <label for="idPrimeiro" class="espacoForms">Digite o primeir numero:</label>
+          <input
+            type="text"
+            id="idPrimeiro"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+          <br>
+          <label for="idSegundo" class="espacoForms">Digite o segundo numero:</label>
+          <input
+            type="text"
+            id="idSegundo"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+          <br>
+          <label for="idTerceiro" class="espacoForms">Digite o terceiro numero:</label>
+          <input
+            type="text"
+            id="idTerceiro"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+          <br>
+          <button type="button" id="btnNome" onclick="resNome()">Clique Aqui</button>
+          <br>
+          <input id="idResultado"></input>
+        </fieldset>
+      </form>
+
+      <script>
+
+        function resNome(){
+
+          let nA = Number(document.getElementById('idPrimeiro').value);
+          let nB = Number(document.getElementById('idSegundo').value);
+          let nC = Number(document.getElementById('idTerceiro').value);
+          if (nA == nB == nC){
+            document.getElementById("idResultado").value = `Favor digitar valor diferentes`
+          }else if (nA > nB && nA > nC){
+            document.getElementById("idResultado").value = `${nA} é o maior numero`;
+          }else if(nB>nC){
+            document.getElementById("idResultado").value = `${nB}é o maior numero`;
+          } else{
+            document.getElementById("idResultado").value = `${nC}é o maior numero`;
+
+          }
+        }
+      </script>
+    </main>
+   <footer></footer>
+  </body>
+</html>

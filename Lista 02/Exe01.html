@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
+    <title>Ex01</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form action="">
+        <fieldset>
+          <legend>Exercicio01</legend>
+          <label for="idPrimeiro" class="espacoForms">Digite o primeir numero:</label>
+          <input
+            type="text"
+            id="idPrimeiro"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+          <br>
+          <label for="idSegundo" class="espacoForms">Digite o segundo numero:</label>
+          <input
+            type="text"
+            id="idSegundo"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+          <button type="button" id="btnNome" onclick="resNome()">Clique Aqui</button>
+          <br>
+          <input id="idResultado"></input>
+        </fieldset>
+      </form>
+
+      <script>
+
+        function resNome(){
+
+          let nA = Number(document.getElementById('idPrimeiro').value);
+          let nB = Number(document.getElementById('idSegundo').value);
+          if (nA == nB){
+            document.getElementById("idResultado").value = `Favor digitar valor diferentes`
+          }else if (nA > nB){
+            document.getElementById("idResultado").value = `${nA} maior que ${nB}`;
+          }else {
+            document.getElementById("idResultado").value = `${nB} maior que ${nA}`;
+
+          }
+
+        }
+      </script>
+    </main>
+   <footer></footer>
+  </body>
+</html>
