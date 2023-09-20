@@ -256,16 +256,45 @@ button {
   text-align: center;
   display: flex;
   justify-content: space-between;
-  width: 170px;
-  height: 90px; /* Define a largura das colunas como 50% */
+  width: 210px;
+  height: 120px; /* Define a largura das colunas como 50% */
   border: 0;
   margin: 0 auto;
   padding: 0;
 }
-.btnButtonStyle {
+.botaoCheckbox {
   font-size: 50px;
-  border-radius: 1;
-  border: 1;
-  width: 80px;
-  height: 80px;
+}
+.botaoEstilizado {
+  display: none;
+}
+
+.botaoEstilizado + label {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(
+    1deg,
+    #3b3b3b7e,
+    #3d623a6f,
+    rgba(36, 151, 38, 0.312)
+  ); /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botaoEstilizado:checked + label {
+  background: linear-gradient(
+    1deg,
+    #3b3b3b7e,
+    #3d623a6f,
+    rgb(0, 91, 2)
+  );
+
+  border: 1px solid black;
 }

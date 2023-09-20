@@ -31,14 +31,24 @@
             required
           />
           <br>
+
           <div class="divButtons">
-            <button type="button" class="btnButtonStyle" id="btnNome" onclick="resNome()">+</button>
-            <button type="button" class="btnButtonStyle" id="btnNome" onclick="resNome()">-</button>
+            <input type="checkbox" class="botaoEstilizado" id="idBtSoma" onclick="resCalculador()">
+            <label for="idBtSoma" class="botaoCheckbox">+</label>
+
+            <input type="checkbox" class="botaoEstilizado" id="idBtSub" onclick="resCalculador()">
+            <label for="idBtSub" class="botaoCheckbox">-</label>
+
            </div>
            <div class="divButtons">
-            <button type="button" class="btnButtonStyle" id="btnNome" onclick="resNome()">x</button>
-            <button type="button" class="btnButtonStyle" id="btnNome" onclick="resNome()">÷</button>
+            <input type="checkbox" class="botaoEstilizado" id="idBtMul" onclick="resCalculador()">
+            <label for="idBtMul" class="botaoCheckbox">X</label>
+
+            <input type="checkbox" class="botaoEstilizado" id="idBtnDiv" onclick="resCalculador()">
+            <label for="idBtnDiv" class="botaoCheckbox">÷</label>
+
           </div>
+
           <br>
           <br>
           <input id="idResultado"></input>
@@ -47,11 +57,34 @@
 
       <script>
 
-        function resNome(){
+        function resCalculador(){
 
           let nA = Number(document.getElementById('idPrimeiro').value);
           let nB = Number(document.getElementById('idSegundo').value);
-          
+
+          let soma = Boolean(document.getElementById('idBtSoma').checked);
+          let subt = Boolean(document.getElementById('idBtSub').checked);
+          let mult = Boolean(document.getElementById('idBtMul').checked);
+          let div = Boolean(document.getElementById('idBtnDiv').checked);
+          let resultado = 0;
+          if(soma == true) {
+            console.log("teste1");
+            resultado = (a,b) => ( a + b );
+
+          }else if( subt == true){
+            console.log("teste1");
+            resultado = (a,b) => ( a - b );
+          }else if( mult == true){
+            console.log("teste1");
+            resultado = (a,b) => ( a * b );
+
+          }else if ( div == true){
+            console.log("teste1");
+            resultado = (a,b) => ( a / b );
+          }
+
+          document.getElementById('idResultado').value = `Resultado ${resultado(nA,nB)}`;
+
         }
       </script>
     </main>
