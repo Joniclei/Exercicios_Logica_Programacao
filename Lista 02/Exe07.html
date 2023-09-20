@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
+    <title>Ex07</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form action="">
+        <fieldset>
+          <legend>Exercicio07</legend>
+          <label for="idSalario" class="espacoForms">Qual seu salario:</label>
+          <input
+            type="text"
+            id="idSalario"
+            name="nmUser"
+            minlength="3"
+            maxlength="140"
+            required
+          />
+          <br>
+
+          <button type="button" id="btnNome" onclick="resNome()">Clique Aqui</button>
+          <br>
+          <input id="idResultado"></input>
+        </fieldset>
+      </form>
+
+      <script>
+
+        function resNome(){
+
+          let salario = Number(document.getElementById('idSalario').value);
+          let resultado = 0;
+
+          if(salario <= 600){
+            resultado = salario;
+          }else if (salario <=1200){
+            resultado = salario - (salario * 0.25);
+          }else if (salario <=2000){
+            resultado = salario - (salario * 0.30);
+          }else{
+            resultado = salario - (salario * 0.35);
+          }
+
+          document.getElementById('idResultado').value = `salario igual a ${resultado}`;
+
+        }
+      </script>
+    </main>
+   <footer></footer>
+  </body>
+</html>
