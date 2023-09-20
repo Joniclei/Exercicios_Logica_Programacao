@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
+  <title>Ex09</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <form action="">
+      <fieldset>
+        <legend>Exercicio09</legend>
+
+
+
+        <div class="styleRadio">
+
+          <input type="radio" class="radioEstilizado" name="opGeome" id="idBtSoma" onclick="resCalculador()">
+
+          <summary>Circulo:</summary>
+          <p>Digite o Raio</p>
+          <input type="text" id="idRaio" maxlength="140" />
+        </div>
+
+        <div class="styleRadio">
+
+          <input type="radio" class="radioEstilizado" name="opGeome" id="idBtSoma" onclick="resCalculador()">
+          <input type="text" id="idPrecoMerc" maxlength="140" />
+          <p>Digite a altura</p>
+          <input type="text" id="idPrecoMerc" maxlength="140" />
+        </div>
+        <div class="styleRadio">
+
+          <input type="radio" class="radioEstilizado" name="opGeome" id="idBtSoma" onclick="resCalculador()">
+          <input type="text" id="idPrecoMerc" maxlength="140" />
+          <p>Digite a altura</p>
+          <input type="text" id="idPrecoMerc" maxlength="140" />
+        </div>
+
+
+ <div class="styleRadio">
+
+        </div>
+
+        <input type="radio" class="radioEstilizado" name="opGeome" id="idBtSoma" onclick="resCalculador()">
+        <input type="text" id="idPrecoMerc" maxlength="140" />
+
+
+
+
+
+        <br>
+
+        <button type="button" id="btnNome" onclick="resNome()">Clique Aqui</button>
+        <br>
+        <input id="idResultado"></input>
+      </fieldset>
+    </form>
+
+    <script>
+
+      function resNome() {
+
+        let preco = Number(document.getElementById('idPrecoMerc').value);
+        let resultado = 0;
+
+        if (preco < 20) {
+          resultado = preco * 1.5;
+
+          document.getElementById('idResultado').value = `margem de 50% ${resultado}`;
+        } else {
+          resultado = preco * 1.35;
+          document.getElementById('idResultado').value = `margem de 35% ${resultado}`;
+
+        }
+
+
+
+
+      }
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

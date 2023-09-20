@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
+  <title>Login</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <form action="">
+      <fieldset>
+        <legend>Login</legend>
+        <label for="idUser" class="espacoForms">Usuario:</label>
+
+        <input type="text" id="idUser" name="nmUser" minlength="3" maxlength="140" required />
+
+        <label for="idSenha">Senha:</label>
+        <input type="password" name="nmSenha" id="idSenha" required />
+
+        <button type="button" id="btnNome" onclick="resposta()">Login</button>
+
+        <output type="text" name="" id="idResultado">
+
+
+      </fieldset>
+    </form>
+  </main>
+  <footer>
+
+  </footer>
+
+  <script>
+
+
+    let id1 = 'Aluno1'
+    let id2 = 'Aluno2'
+    let id3 = 'Aluno3'
+    let senha1 = 'Trocar123'
+    let senha2 = 'Senha@123'
+    let senha3 = '123Trocar'
+
+    function resposta() {
+
+      let id = document.getElementById("idUser").value;
+      let senha = document.getElementById("idSenha").value;
+
+      let resposta = "";
+
+      if ((id == id1 && senha == senha1) || (id == id2 && senha == senha2) || (id == id3 && senha == senha3)) {
+        resposta = "Acesso Permitido";
+      } else if (id == id1 || id == id2 || id == id3) {
+        resposta = "Senha incorreta";
+      } else {
+        resposta = "Usuário não cadastrado";
+      }
+      // eu fiz ao contrario em vez de validar a senha e dar erro no id,eu fiz ao inverso,mas creio que nao mude o resultado
+
+      document.getElementById("idResultado").value = `${resposta}`;
+    }
+
+  </script>
+
+
+</body>
+
+</html>
