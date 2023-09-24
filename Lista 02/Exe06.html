@@ -33,18 +33,18 @@
           <br>
 
           <div class="divButtons">
-            <input type="checkbox" class="botaoEstilizado" id="idBtSoma" onclick="resCalculador()">
+            <input type="radio" class="botaoEstilizado" name="calculadora" id="idBtSoma" onclick="resCalculador()">
             <label for="idBtSoma" class="botaoCheckbox">+</label>
 
-            <input type="checkbox" class="botaoEstilizado" id="idBtSub" onclick="resCalculador()">
+            <input type="radio" class="botaoEstilizado" name="calculadora" id="idBtSub" onclick="resCalculador()">
             <label for="idBtSub" class="botaoCheckbox">-</label>
 
            </div>
            <div class="divButtons">
-            <input type="checkbox" class="botaoEstilizado" id="idBtMul" onclick="resCalculador()">
+            <input type="radio" class="botaoEstilizado" name="calculadora" id="idBtMul" onclick="resCalculador()">
             <label for="idBtMul" class="botaoCheckbox">X</label>
 
-            <input type="checkbox" class="botaoEstilizado" id="idBtnDiv" onclick="resCalculador()">
+            <input type="radio" class="botaoEstilizado" name="calculadora" id="idBtnDiv" onclick="resCalculador()">
             <label for="idBtnDiv" class="botaoCheckbox">÷</label>
 
           </div>
@@ -62,6 +62,7 @@
           let nA = Number(document.getElementById('idPrimeiro').value);
           let nB = Number(document.getElementById('idSegundo').value);
 
+          // aqui eu converti para Booleano.Foi visto em aula que nao é preciso
           let soma = Boolean(document.getElementById('idBtSoma').checked);
           let subt = Boolean(document.getElementById('idBtSub').checked);
           let mult = Boolean(document.getElementById('idBtMul').checked);

@@ -4,62 +4,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="./assets/CSS/style.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/CSS/style9.css" />
   <title>Ex09</title>
 </head>
 
 <body>
-  <header></header>
+  <header id="idNavBar"><h1> Formas Geometricas</h1></header>
   <main>
-    <form action="">
-      <fieldset>
-        <legend>Exercicio09</legend>
+    <div id="idGlobalImg">
 
+      <div class="divImgGeo">
+        <a  href=""><img src="./assets/IMG/circle.gif" alt="Circulo">
+          <p class="paragrafoImg">Clique aqui para Calcular a area de um Circulo</p>
+        </a>
+        <label for=""></label>
+      </div>
+      <div class="divImgGeo">
+        <a  href=""><img src="./assets/IMG/rentangle.gif" alt="Retangulo">
+          <p class="paragrafoImg">Clique aqui para Calcular a area de um Retangulo</p>
+        </a>
+      </div>
+      <div class="divImgGeo">
+        <a  href=""><img src="./assets/IMG/rightTriangle.gif" alt="Triangulo Retangulo">
+          <p class="paragrafoImg">Clique aqui para Calcular a area de um triangulo Retangulo</p>
+        </a>
+      </div>
+      <div class="divImgGeo">
+        <a  href=""><img src="./assets/IMG/triangle.gif" alt="Triangulo Equilatero">
+          <p class="paragrafoImg">Clique aqui para Calcular a area de um triangulo Equilatero</p>
+        </a>
+      </div>
+    </div>
 
-
-        <div class="styleRadio">
-
-          <input type="radio" class="radioEstilizado" name="opGeome" id="idBtSoma" onclick="resCalculador()">
-
-          <summary>Circulo:</summary>
-          <p>Digite o Raio</p>
-          <input type="text" id="idRaio" maxlength="140" />
-        </div>
-
-        <div class="styleRadio">
-
-          <input type="radio" class="radioEstilizado" name="opGeome" id="idBtSoma" onclick="resCalculador()">
-          <input type="text" id="idPrecoMerc" maxlength="140" />
-          <p>Digite a altura</p>
-          <input type="text" id="idPrecoMerc" maxlength="140" />
-        </div>
-        <div class="styleRadio">
-
-          <input type="radio" class="radioEstilizado" name="opGeome" id="idBtSoma" onclick="resCalculador()">
-          <input type="text" id="idPrecoMerc" maxlength="140" />
-          <p>Digite a altura</p>
-          <input type="text" id="idPrecoMerc" maxlength="140" />
-        </div>
-
-
- <div class="styleRadio">
-
-        </div>
-
-        <input type="radio" class="radioEstilizado" name="opGeome" id="idBtSoma" onclick="resCalculador()">
-        <input type="text" id="idPrecoMerc" maxlength="140" />
-
-
-
-
-
-        <br>
-
-        <button type="button" id="btnNome" onclick="resNome()">Clique Aqui</button>
-        <br>
-        <input id="idResultado"></input>
-      </fieldset>
-    </form>
 
     <script>
 
