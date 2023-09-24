@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../assets/CSS/style9.css" />
+  <title>Ex09</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <button><a href="../Exe09.html">Voltar</a></button>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Circulo</legend>
+          <div class="divInputOutput">
+            <label for="idRaio">Digite o Raio</label>
+            <input type="text" id="idRaio">
+          </div>
+          <button type="button" onclick="area()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio">Resultado</label>
+            <p id="idResultado"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+      function area(){
+        let raio = Number(document.getElementById('idRaio').value);
+
+        let resultado = Math.PI * (raio *raio);
+        document.getElementById('idResultado').innerText= `Area igual a ${resultado}`;
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../assets/CSS/style9.css" />
+  <title>Ex09</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <button><a href="../Exe09.html">Voltar</a></button>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Triangulo Equilatero</legend>
+          <div class="divInputOutput">
+            <label for="idLado">Digite o lado</label>
+            <input type="text" id="idLado">
+          </div>
+
+          <button type="button" onclick="area()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio">Resultado</label>
+            <p id="idResultado"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+      function area(){
+        let lado = Number(document.getElementById('idLado').value);
+
+
+        let resultado = ((lado ** 2) *  Math.sqrt(3) )/4
+
+        document.getElementById('idResultado').innerText= `Area igual a ${resultado}`;
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

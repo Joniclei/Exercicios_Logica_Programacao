@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../assets/CSS/style9.css" />
+  <title>Ex09</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <button><a href="../Exe09.html">Voltar</a></button>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Triangulo retangulo</legend>
+          <div class="divInputOutput">
+            <label for="idBase">Digite a Baser</label>
+            <input type="text" id="idBase">
+          </div>
+
+          <div class="divInputOutput">
+            <label for="idAltura">Digite a Altura</label>
+            <input type="text" id="idAltura">
+          </div>
+
+          <button type="button" onclick="area()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio">Resultado</label>
+            <p id="idResultado"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+      function area(){
+        let base = Number(document.getElementById('idBase').value);
+        let altura = Number(document.getElementById('idAltura').value);
+
+        let resultado = (base * altura)/2;
+        document.getElementById('idResultado').innerText= `Area igual a ${resultado}`;
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
