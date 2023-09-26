@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex01</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Velocidade</legend>
+          <div class="divInputOutput">
+            <label for="idVelocidade">Qual a velocidade:</label>
+            <input type="text" id="idVelocidade">
+          </div>
+
+
+
+          <button type="button" onclick="area()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio">Resultado</label>
+            <p id="idResultado"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+
+      function area(){
+        let velo = Number(document.querySelector("idVelocidade"));
+
+        let resultado = base * altura;
+        document.getElementById('idResultado').innerText= `Area igual a ${velo}`;
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
