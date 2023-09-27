@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex08</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Velocidade</legend>
+          <div class="divInputOutput">
+            <label for="idKm">Quanto km quer percorrer :</label>
+            <input type="text" id="idKm">
+          </div>
+
+
+          <button type="button" onclick="kmRodado()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <p id="idResultado"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+
+      function kmRodado(){
+        let km = Number(document.querySelector("#idKm").value);
+        let resposta;
+        //let velo = Number(document.getElementById("idVelocidade"));
+        if (km <= 200) {
+          resposta = `Preco a ser pago R$${km*0.5}`
+
+        } else {
+          resposta = `Preco a ser pago R$${km*0.45}`
+        }
+
+        document.getElementById('idResultado').textContent= `${resposta}`;
+
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
