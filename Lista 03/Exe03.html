@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex03</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Media</legend>
+          <div class="divInputOutput">
+            <label for="idNome">Qual seunome:</label>
+            <input type="text" id="idNome">
+          </div>
+          <div class="divInputOutput">
+            <label for="idDataNasc">Primeira Nota:</label>
+            <input type="number" id="idNota1">
+          </div>
+          <div class="divInputOutput">
+            <label for="idDataNasc">Segunda Nota:</label>
+            <input type="number" id="idNota2">
+          </div>
+          <button type="button" onclick="mediaAluno()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <output id="idResultado"></output>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+
+      function mediaAluno() {
+        let nome = document.querySelector("#idNome").value;
+        let notaA = Number(document.querySelector("#idNota1").value);
+        let notaB = Number(document.querySelector("#idNota2").value);
+        let media = Number((notaA+notaB)/2);
+        let resposta;
+
+        if (media > 7){
+          resposta = "Aluno acima da media"
+
+        }else {
+          resposta = "Nao ficou acima da media"
+        }
+
+        let dataAtual = new Date();
+
+        document.getElementById('idResultado').value = `${nome} sua media:${media}. ${resposta}`;
+
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

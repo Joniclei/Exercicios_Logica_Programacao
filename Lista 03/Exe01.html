@@ -21,10 +21,9 @@
           </div>
 
 
-
           <button type="button" onclick="area()">clique aqui</button>
           <div class="divInputOutput">
-            <label for="idRaio">Resultado</label>
+            <label for="idRaio"></label>
             <p id="idResultado"></p>
           </div>
         </fieldset>
@@ -33,10 +32,18 @@
     <script>
 
       function area(){
-        let velo = Number(document.querySelector("idVelocidade"));
+        let velo = Number(document.querySelector("#idVelocidade").value);
+        let resposta;
+        //let velo = Number(document.getElementById("idVelocidade"));
+        if (velo >80) {
+          resposta = `Voce foi multado,multa no valor de R$ ${velo*5}`
 
-        let resultado = base * altura;
-        document.getElementById('idResultado').innerText= `Area igual a ${velo}`;
+        } else {
+          resposta = `Voce nao foi multado`;
+        }
+
+        document.getElementById('idResultado').textContent= `${resposta}`;
+
       }
 
     </script>

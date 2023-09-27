@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex02</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Idade</legend>
+          <div class="divInputOutput">
+            <label for="idDataNasc">Qual sua data de nascimento:</label>
+            <input type="date" id="idDataNasc">
+          </div>
+          <button type="button" onclick="validaIdade()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <p id="idResultado"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+
+      function validaIdade() {
+        let dataNasc = new Date(document.querySelector("#idDataNasc").value);
+        let dataAtual = new Date();
+        //console.log(typeof dataNasc);
+        let resposta;
+
+        //let velo = Number(document.getElementById("idVelocidade"));
+        if ((Number(dataAtual.getFullYear()) - Number(dataNasc.getFullYear())) < 16) {
+          resposta = "nao pode votar"
+        } else if (((Number(dataAtual.getFullYear()) - Number(dataNasc.getFullYear())) < 18)) {
+          if ((Number(dataAtual.getMonth())) == Number(dataNasc.getMonth())) {
+            if ((Number(dataAtual.getDate()) > Number(dataNasc.getDate()))) {
+              resposta = "Pode votar mas nao é obrigatorio"
+            }
+          } else if ((Number(dataAtual.getMonth()) > Number(dataNasc.getMonth()))){
+            resposta = "Pode votar mas nao é obrigatorio"
+          }else {
+            resposta = "Nao tem idade para votar"
+          }
+        }else {
+          resposta = "Voce é obrigatorio a votar";
+        }
+
+        document.getElementById('idResultado').textContent = `${resposta}`;
+
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
