@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex05</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Validacao de Ano Bissexto</legend>
+          <div class="divInputOutput">
+            <label for="idAno">Digite uma data:</label>
+            <input type="date" id="idAno">
+          </div>
+          <button type="button" onclick="validaIdade()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <p id="idResultado"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+
+      function validaIdade() {
+        let validAno = new Date(document.querySelector("#idAno").value);
+
+        let resposta;
+
+        
+        if ((Number(validAno.getFullYear()) % 4) == 0) {
+          resposta = "ano bissexto"
+        } else {
+          resposta = "Nao é ano bissexto";
+        }
+
+        document.getElementById('idResultado').textContent = `${resposta}`;
+
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
