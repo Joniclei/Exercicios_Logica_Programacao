@@ -1,0 +1,91 @@
+
+        </fieldset><!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+          <title>Ex09</title>
+        </head>
+
+        <body>
+          <header></header>
+          <main>
+            <div id="idDivMainCirculo">
+              <form class="formCirculo">
+                <fieldset>
+                  <legend>Validacao de triangulo</legend>
+                  <div class="divInputOutput">
+                    <label for="idRetaA">Digite o primeiro valor para reta:</label>
+                    <input type="text" id="idRetaA">
+                  </div>
+                  <div class="divInputOutput">
+                    <label for="idRetaB">Digite o segundo valor para reta:</label>
+                    <input type="text" id="idRetaB">
+                  </div>
+                  <div class="divInputOutput">
+                    <label for="idRetaC">Digite o terceiro valor para reta:</label>
+                    <input type="text" id="idRetaC">
+                  <button type="button" onclick="mediaAluno()">clique aqui</button>
+                  <div class="divInputOutput">
+                    <label for="idRaio"></label>
+                    <output id="idResultado"></output>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+            <script>
+
+              function mediaAluno() {
+
+                let notaA = Number(document.querySelector("#idRetaA").value);
+                let notaB = Number(document.querySelector("#idRetaB").value);
+                let notaC = Number(document.querySelector("#idRetaC").value);
+                let resposta;
+
+                if ((notaA <(notaB + notaC))&&(notaB <(notaA + notaC))&&(notaC <(notaA + notaB))){
+                  resposta = "As retas formam um triangulo"
+
+                }else {
+                  resposta = "A restas nao formam um tringulo"
+                }
+
+              
+
+                document.getElementById('idResultado').value = `${resposta}`;
+
+              }
+
+            </script>
+          </main>
+          <footer></footer>
+        </body>
+
+        </html>
+
+      </form>
+    </div>
+    <script>
+
+      function area(){
+        let velo = Number(document.querySelector("#idVelocidade").value);
+        let resposta;
+        //let velo = Number(document.getElementById("idVelocidade"));
+        if (velo >80) {
+          resposta = `Voce foi multado,multa no valor de R$ ${velo*5}`
+
+        } else {
+          resposta = `Voce nao foi multado`;
+        }
+
+        document.getElementById('idResultado').textContent= `${resposta}`;
+
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
