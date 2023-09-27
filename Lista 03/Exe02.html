@@ -37,15 +37,23 @@
         //console.log(typeof dataNasc);
         let resposta;
 
-        //let velo = Number(document.getElementById("idVelocidade"));
-        if ((Number(dataAtual.getFullYear()) - Number(dataNasc.getFullYear())) < 16) {
+        let ano = Number((Number(dataAtual.getFullYear())) - (Number((dataNasc.getFullYear()))));
+        let mes = Number((Number(dataAtual.getMonth())) - (Number(dataNasc.getMonth())));
+        let dia = Number((Number(dataAtual.getDate())) - (Number(dataNasc.getDate())));
+          console.log(dataNasc);
+          console.log(dataAtual);
+
+
+        if (ano < 16) {
           resposta = "nao pode votar"
-        } else if (((Number(dataAtual.getFullYear()) - Number(dataNasc.getFullYear())) < 18)) {
-          if ((Number(dataAtual.getMonth())) == Number(dataNasc.getMonth())) {
-            if ((Number(dataAtual.getDate()) > Number(dataNasc.getDate()))) {
+        } else if (ano < 18) {
+          if (mes == 0) {
+            if (dia >= 0) {
               resposta = "Pode votar mas nao é obrigatorio"
+            }else{
+              resposta = "Nao tem idade para votar"
             }
-          } else if ((Number(dataAtual.getMonth()) > Number(dataNasc.getMonth()))){
+          } else if (mes > 0){
             resposta = "Pode votar mas nao é obrigatorio"
           }else {
             resposta = "Nao tem idade para votar"
