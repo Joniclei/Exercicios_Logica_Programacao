@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex07</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Desconto</legend>
+          <div class="divInputOutput">
+            <label for="idNome">Qual seu nome:</label>
+            <input type="text" id="idNome">
+          </div>
+          <div class="divInputOutput">
+            <label for="idMasculino">Masculino:</label>
+            <input type="radio" id="idMasculino" name="idSexo" value="m">
+          </div>
+          <div class="divInputOutput">
+            <label for="idFemenino">Femenino:</label>
+            <input type="radio" id="idFemenino" name="idSexo" value="f">
+          </div>
+          <div class="divInputOutput">
+            <label for="idValorCom">Valor das compras:</label>
+            <input type="number" id="idValorCom">
+          </div>
+          <button type="button" onclick="mediaAluno()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <output id="idResultado"></output>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+
+      function mediaAluno() {
+        let nome = document.querySelector("#idNome").value;
+        let valor = Number(document.querySelector("#idValorCom").value);
+       
+        let sexo = document.querySelector("input[name=idSexo]:checked").value;
+        let resposta;
+
+        switch(sexo){
+          case"m":
+            resposta = `${valor - (valor*0.05)}`;
+            break;
+
+          case"f":
+          resposta = `${valor - (valor*0.13)}`;
+            break;
+
+        }
+
+        document.getElementById('idResultado').value = `${nome} valor da compra:${valor}.valor com desconto ${resposta}`;
+
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
