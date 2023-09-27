@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex10</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>IMC</legend>
+          <div class="divInputOutput">
+            <label for="idPeso">Qual seu peso:</label>
+            <input type="number" id="idPeso">
+          </div>
+
+          <div class="divInputOutput">
+            <label for="idaltura">Qual sua altura:</label>
+            <input type="number" id="idAltura">
+          </div>
+
+
+          <button type="button" onclick="area()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <p id="idResultado"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+
+      function area(){
+        let peso = Number(document.querySelector("#idPeso").value);
+        let altura = Number(document.querySelector("#idAltura").value);
+        let imc = Number(peso /(altura*altura));
+        let resposta;
+        console.log(imc)
+
+        if (imc<=18.5) {
+          resposta = `Abaixo do peso`
+        } else if (imc <= 25){
+          resposta = `Peso ideal`;
+        } else if (imc <= 30){
+          resposta = `Sobrepeso`;
+        } else if (imc <= 40){
+          resposta = `Obesidade`;
+        }else{
+          resposta = `Obesidade mórbida`;
+        }
+
+        document.getElementById('idResultado').textContent= `${resposta}`;
+
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
