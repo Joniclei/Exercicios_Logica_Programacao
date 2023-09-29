@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex02</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+
+          <button type="button" onclick="resposta()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <p id="idResultado"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+
+      function resposta(){
+        let inicio = "Inicio! ";
+
+        let resposta = "";
+        let j = 30;
+
+
+
+        for (let i = 30; i > 0; i--) {
+
+          if (j % 4 == 0) {
+            resposta += "[" + String(j) + "] ";
+
+          }else {
+            resposta += String(j) + " ";
+          }
+          j -=1;
+
+        }
+
+        document.getElementById('idResultado').textContent= `Inicio! ${resposta} Acabou!`;
+        console.log(resposta);
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

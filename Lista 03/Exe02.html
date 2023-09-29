@@ -17,7 +17,7 @@
           <legend>Idade</legend>
           <div class="divInputOutput">
             <label for="idDataNasc">Qual sua data de nascimento:</label>
-            <input type="date" id="idDataNasc">
+            <input type="datetime-local" id="idDataNasc">
           </div>
 
 
@@ -34,8 +34,10 @@
       function validaIdade() {
         let dataNasc = new Date(document.querySelector("#idDataNasc").value);
         let dataAtual = new Date();
-        //console.log(typeof dataNasc);
+        console.log(typeof dataNasc);
         let resposta;
+        console.log(dataNasc);
+          console.log(dataAtual);
 
         let ano = Number((Number(dataAtual.getFullYear())) - (Number((dataNasc.getFullYear()))));
         let mes = Number((Number(dataAtual.getMonth())) - (Number(dataNasc.getMonth())));
@@ -61,6 +63,7 @@
         }else {
           resposta = "Voce é obrigatorio a votar";
         }
+
 
         document.getElementById('idResultado').textContent = `${resposta}`;
 

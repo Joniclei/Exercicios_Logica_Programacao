@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex01</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Velocidade</legend>
+          <div class="divInputOutput">
+            <label for="idValorInicial">Digite o valor inicial da contagem:</label>
+            <input type="text" id="idValorInicial">
+          </div>
+
+          <div class="divInputOutput">
+            <label for="idValorFinal">Digite o valor final do incremento:</label>
+            <input type="text" id="idValorFinal">
+          </div>
+
+          <div class="divInputOutput">
+            <label for="idValorIncremento">Digite o valor final da contagem:</label>
+            <input type="text" id="idValorIncremento">
+          </div>
+
+
+          <button type="button" onclick="resposta()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <p id="idResultado"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+
+      function resposta(){
+
+
+        let valorInicial = Number(document.querySelector("#idValorInicial").value);
+        let valorFinal = Number(document.querySelector("#idValorFinal").value);
+        let valorIncremento = Number(document.querySelector("#idValorIncremento").value);
+
+        let resposta = valorInicial + " ";
+
+        for (let i = valorInicial; i < valorFinal; i += valorIncremento) {
+
+          resposta += String(i + valorIncremento) + " ";
+        }
+
+        document.getElementById('idResultado').textContent= `Inicio! ${resposta} Acabou!`;
+        console.log(resposta);
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
