@@ -35,27 +35,32 @@
       var recebendo = []
       function recebaValor() {
         var valorDigitado = document.querySelector("#idValores").value;
-        recebendo.push(parseFloat(valorDigitado)); // Adicione o valor ao array
+        recebendo.push(Number(valorDigitado));
+        document.querySelector("#idValores").value = "";
+          // Adicione o valor ao array
       }
       function resposta() {
 
-        let maior = "O maior valor digitado é ";
-        let menor = "O menor valor digitado é ";
+        let maior = 0;
+        let menor = 'a' ;
 
-        let respMaior = document.getElementById('idResultMaior');
-        let respMenor = document.getElementById('idResultMenor');
+        let respMaior = document.querySelector('#idResultMaior');
+        let respMenor = document.querySelector('#idResultMenor');
         console.log(recebendo);
         for (let i = 0; i < recebendo.length; i++) {
           if (recebendo[i] > maior) {
             maior = recebendo[i];
+          }
+          if (menor =='a') {
+            menor = recebendo[i];
           }
           if (recebendo[i] < menor) {
             menor = recebendo[i];
           }
         }
 
-        respMaior.textContent = `${maior}`;
-        respMenor.textContent = `${menor}`
+        respMaior.textContent = `O maior numero é :${maior}`;
+        respMenor.textContent = `O menor numero é :${menor}`
 
 
       }
