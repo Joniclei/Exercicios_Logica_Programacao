@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex03</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Exercicio04</legend>
+
+          <button type="button" onclick="resposta()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <p id="idFibo"></p>
+
+
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+
+      function resposta(){
+        const fibo = document.querySelector('#idFibo');
+        const divisivel = document.querySelector('#idDivisivel');
+
+        let resposta = "Inicio! ";
+        let fibona = 0;
+        let b = 1;
+
+        resposta = resposta + fibona + " ";
+        for (let i = 0; i < 10; i ++) {
+          fibona = fibona + b;
+          b = fibona - b;
+          resposta = resposta + fibona + " ";
+
+        }
+
+        fibo.textContent = `${resposta}`;
+
+
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

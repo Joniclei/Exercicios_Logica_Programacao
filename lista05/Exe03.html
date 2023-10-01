@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex03</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Exercicio03</legend>
+
+          <button type="button" onclick="resposta()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <p id="idAcima"></p>
+            <p id="idDivisivel"></p>
+
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+
+      function resposta(){
+        const acima = document.querySelector('#idAcima');
+        const divisivel = document.querySelector('#idDivisivel');
+
+        let acimade5 = 0;
+        let divisivel3 = 0;
+        let resposta = "Inicio ";
+
+        for (let i = 0; i < 20; i ++) {
+          let j = Math.floor(Math.random() * 11);
+
+          console.log(j);
+
+          if(j > 5){
+            acimade5 += 1;
+          }
+          if((j!=0)&&(j % 3 == 0)){
+            divisivel3 += 1;
+          }
+        }
+
+        acima.textContent = `Acima de 5: ${acimade5}`;
+        divisivel.textContent = `Divisivel por 3: ${divisivel3}`;
+
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
