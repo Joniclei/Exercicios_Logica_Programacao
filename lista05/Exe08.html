@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex08</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Exercicio08</legend>
+          <div class="divInputOutput">
+            <label for="idCelsius">Digite uma temperatura em graus Celsius:</label>
+            <input type="text" id="idCelsius">
+          </div>
+
+
+          <button type="button" onclick="resposta()">clique aqui</button>
+          <div class="divInputOutput">
+            <p id="idResultado"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+
+      function resposta(){
+
+        let c = Number(document.querySelector("#idCelsius").value);
+        let f = (9 * c + 160) / 5;
+        let resultado = document.querySelector("#idResultado");
+
+        resultado.textContent =  `A temperatura em Fahrenheit é ${f} graus`;
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

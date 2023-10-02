@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex07</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Exercicio07</legend>
+          <div class="divInputOutput">
+            <label for="idValor">Digite um valor :</label>
+            <input type="text" id="idValor">
+          </div>
+          <button type="button" onclick="recebaValor()">clique aqui</button>
+          <div class="divInputOutput">
+            <p id="idResultado"></p>
+          <button type="reset" onclick ="reset" >Comecar novamente</button>
+
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+      let contador = 0;
+      function recebaValor() {
+        let j = (Math.floor(Math.random() * 10)) +1;
+        let valor = Number(document.querySelector("#idValor").value);
+        let resultado = document.querySelector("#idResultado");
+        let resposta = "";
+        console.log(j);
+        console.log(valor);
+        console.log("contatodor antes" + contador);
+        if (contador >=3){
+          resposta = "Perdeu o Jogo";
+        }else{
+          if (j === valor){
+            resposta = "Acertou";
+          }else{
+            contador = contador + 1;
+            resposta = "Tente Novamente";
+          }
+        }
+        console.log("contato" + contador);
+
+        resultado.textContent = `${resposta}`;
+      }
+
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
