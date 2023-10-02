@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex06</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Exe06</legend>
+          <div class="divInputOutput">
+            <label for="idIdades">Digite sua idade :</label>
+            <input type="text" id="idIdades">
+          </div>
+
+          <button type="button" onclick="recebaValor()">Envie o valor</button>
+
+          <button type="button" onclick="resposta()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <p id="idResultMedia"></p>
+            <p id="idResultMaior18"></p>
+            <p id="idResultMenor5"></p>
+            <p id="idResultMaiorIdade"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+      var recebendo = []
+      function recebaValor() {
+        var valorDigitado = document.querySelector("#idIdades").value;
+        recebendo.push(Number(valorDigitado));
+        document.querySelector("#idIdades").value = "";
+        // Adicione o valor ao array
+      }
+      function resposta() {
+
+        let media = 0;
+        let maior18 = 0;
+        let menor5 = 0;
+        let maiorIdade = 0;
+
+        let resultMedia = document.querySelector('#idResultMedia');
+        let resultMaior18 = document.querySelector('#idResultMaior18');
+        let resultMenor5 = document.querySelector('#idResultMenor5');
+        let resultMaiorIdade = document.querySelector('#idResultMaiorIdade');
+
+        console.log(recebendo);
+        for (let i = 0; i < recebendo.length; i++) {
+          media += Number(recebendo[i]);
+          if (recebendo[i] > 18) {
+            maior18++;
+          }
+          if (recebendo[i] < 5) {
+            menor5++;
+          }
+          if (recebendo[i] > maiorIdade) {
+            maiorIdade = recebendo[i];
+          }
+        }
+
+        media = media / recebendo.length;
+        console.log(media);
+        resultMedia.textContent = `Media de Idade é :${media}`;
+        resultMaior18.textContent = `Quantidade que tem mais de 18 anos :${maior18}`;
+        resultMenor5.textContent = `Quantidade que tem menos de 5 anos :${menor5}`;
+        resultMaiorIdade.textContent = `A maior idade é :${maiorIdade}`
+
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
