@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex03</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+
+
+          <br>
+          <label for="posicaoNum">Digite um valor:</label>
+          <input type="number" id="posicaoNum">
+          <button type="button" onclick="resposta()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <p id="idResultado"></p>
+            <p id="idResultMenor"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+      var respost = [];
+
+      for (let i = 0; i < 20; i++) {
+        respost[i] = parseInt(Math.random() * 16);
+        console.log(respost);
+      }
+      function resposta() {
+        //let posicao = [];
+        let posicao = " ";
+
+        let posicaoNum = document.getElementById('posicaoNum').value;
+
+        for (let i = 0; i < respost.length; i++) {
+          if (String(posicaoNum) == respost[i].toString()) {
+            posicao = posicao + "Posicao " + i + "|";
+            console.log(posicao);
+          }
+          console.log("for:" + posicao);
+        }
+        console.log("aqyu:" + posicao);
+
+        //console.table(respost);
+        // console.table(multiplo);
+        document.getElementById('idResultado').textContent = `${respost}`;
+        document.getElementById('idResultMenor').textContent = `${posicao}`;
+
+      }
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

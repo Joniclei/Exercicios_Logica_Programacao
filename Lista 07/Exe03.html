@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex03</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+
+          <button type="button" onclick="resposta()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <p id="idResultado"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+
+      function resposta(){
+      let resposta = [];
+       for (let i = 0; i < 10; i++) {
+         if (i % 2 == 0) {
+            resposta [i] = 5 ;
+         } else {
+            resposta [i] = 3 ;
+         }
+       }
+       console.table(resposta);
+        document.getElementById('idResultado').textContent= `${resposta}`;
+      }
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

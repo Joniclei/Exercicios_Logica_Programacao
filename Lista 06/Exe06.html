@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex01</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Exe05</legend>
+          <div class="divInputOutput">
+            <label for="idNomes">Digite nome :</label>
+            <input type="text" id="idNomes">
+          </div>
+
+          <button type="button" onclick="recebaNomes()">Envie o nome</button>
+
+          <button type="button" onclick="resposta()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <p id="idResultMaior"></p>
+            <p id="idResultMenor"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+      var recebendo = []
+      function recebaNomes() {
+        var nome = document.querySelector("#idNomes").value;
+        console.log(nome)
+        recebendo.push(nome);
+        console.log(recebendo)
+        document.querySelector("#idNomes").value = " ";
+          // Adicione o valor ao array
+      }
+      function resposta() {
+        let respMaior = document.querySelector('#idResultMaior');
+        let respMenor = document.querySelector('#idResultMenor');
+
+
+        let respost = [];
+        for (let index = 0;index < recebendo.length; index++) {
+          let indexResp = recebendo.length - (index + 1);
+          respost[indexResp] = recebendo[index];
+        }
+
+        respMaior.textContent = `Ordem :${recebendo}`;
+        respMenor.textContent = `Inverso :${respost}`
+
+
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

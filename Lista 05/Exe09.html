@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex09</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Exercicio09</legend>
+          <div class="divInputOutput">
+            <label for="idTipoTemp">Qual a medida que deseja digitar :</label>
+            <select name="selecaoTemperatura" id="TipoTemp">
+              <option value="Celsius">Celsius</option>
+              <option value="Fahrenheit">Fahrenheit</option>
+              <option value="Kelvin">Kelvin</option>
+            </select>
+          </div>
+          <div class="divInputOutput">
+            <label for="idTemperatura">Digite a temperadura:</label>
+            <input type="text" id="idTemperatura">
+          </div>
+
+          <button type="button" onclick="resposta()">clique aqui</button>
+          <div class="divInputOutput">
+            <p id="idResultado"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+
+      function resposta(){
+
+        let tipoTemperatura = document.querySelector("#TipoTemp").value;
+        let recebeTemperatura= document.querySelector("#idTemperatura").value;
+        let C = 0;
+        let F = 0;
+        let k = 0;
+
+        let resultado = document.querySelector("#idResultado");
+
+        let resposta = "";
+
+
+        switch (tipoTemperatura) {
+          case "Celsius":
+          K=C+273;
+          F=(9*C+160)/5;
+          resposta = "A temperatura em Celsius é " + C + " graus, a temperatura em Fahrenheit é " + F + " graus e a temperatura em Kelvin é " + K + " graus";
+          break;
+          case "Fahrenheit":
+          C = ((F * 5)-160)/9;
+          K = ((F * 5)-160)/9 + 273;
+          resposta = "A temperatura em Celsius é " + C + " graus, a temperatura em Fahrenheit é " + F + " graus e a temperatura em Kelvin é " + K + " graus";
+            break;
+          case "Kelvin":
+          C = K-273;
+          F  = (((K - 273) * 9) + 160)/5
+          resposta = "A temperatura em Celsius é " + C + " graus, a temperatura em Fahrenheit é " + F + " graus e a temperatura em Kelvin é " + K + " graus";
+            break;
+          default:
+            break;
+        }
+
+       ;
+
+        resultado.textContent =  `${resposta}`;
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

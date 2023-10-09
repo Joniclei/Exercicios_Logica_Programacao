@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex01</title>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div id="idDivMainCirculo">
+      <form class="formCirculo">
+        <fieldset>
+          <legend>Exe05</legend>
+          <div class="divInputOutput">
+            <label for="idValores">Digite o valor :</label>
+            <input type="text" id="idValores">
+          </div>
+
+          <button type="button" onclick="recebaValor()">Envie o valor</button>
+
+          <button type="button" onclick="resposta()">clique aqui</button>
+          <div class="divInputOutput">
+            <label for="idRaio"></label>
+            <p id="idResultMaior"></p>
+            <p id="idResultMenor"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+      var recebendo = []
+      function recebaValor() {
+        var valorDigitado = document.querySelector("#idValores").value;
+        recebendo.push(Number(valorDigitado));
+        document.querySelector("#idValores").value = "";
+          // Adicione o valor ao array
+      }
+      function resposta() {
+
+
+        let multiplo = "Posicao " ;
+
+        let respMaior = document.querySelector('#idResultMaior');
+        let respMenor = document.querySelector('#idResultMenor');
+
+        console.log(recebendo);
+        for (let i = 0; i < recebendo.length; i++) {
+          if (recebendo[i] % 10 == 0) {
+            multiplo = multiplo + i + ": "+ recebendo[i] + "|";
+          }
+        }
+
+        respMaior.textContent = `Vetor :${recebendo}`;
+        respMenor.textContent = `Multiplos de 10:${multiplo}`
+
+
+      }
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
