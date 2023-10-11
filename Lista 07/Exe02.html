@@ -16,8 +16,12 @@
         <fieldset>
           <legend>Exe05</legend>
           <div class="divInputOutput">
-            <label for="idValores">Digite o valor :</label>
-            <input type="text" id="idValores">
+            <label for="idNome">Digite o nome :</label>
+            <input type="text" id="idNome">
+          </div>
+          <div class="divInputOutput">
+            <label for="idIdade">Digite a Idade:</label>
+            <input type="text" id="idIdde >
           </div>
 
           <button type="button" onclick="recebaValor()">Envie o valor</button>
@@ -32,44 +36,27 @@
       </form>
     </div>
     <script>
-      var recebendo = []
-      for (let i = 0; i < 9; i++) {
+      var nomes = [];
+      var idades = [];;
         function recebaValor() {
-        var valorDigitado = document.querySelector("#idValores").value;
-        recebendo.push(Number(valorDigitado));
-        document.querySelector("#idValores").value = "";
-          // Adicione o valor ao array
-      }
+        var valorNome = document.querySelector("#idNome").value;
+        nomes.push(valorDigitado);
+        var valorIdade= document.querySelector("#idIdade").value;
+        idades.push(valorDigitad0);
       }
 
       function resposta() {
-        let result = document.querySelector('#idResult');
+        let resultado = "";
 
 
-        let media = 0;
-        let acimadamedia=0;
-        let maiornota = 'a';
-        let posicao = 0;
-
-        console.log(recebendo);
-        for (let i = 0; i < recebendo.length; i++) {
-          media = Number(media + recebendo[i]);
-          if (recebendo[i] >= 7) {
-            acimadamedia ++;
-          }
-          if (maiornota == 'a'){
-            maiornota = recebendo[i];
-            posicao = i;
-          }else if (maiornota < recebendo[i]){
-            maiornota = recebendo[i];
-            posicao = i;
+        for (let i = 0; i < valorNome.length; i++) {
+          if(idades[i] <= 18){
+            resultado = resultado + "Posicao : " + i + " | Nome : " + nomes[i] + " | Idade : " + idades[i]  + "\n";
           }
         }
-        console.log(media);
-        media = media / recebendo.length;
-        console.log(media);
 
-        result.textContent = `Media: ${media} | Acima da media: ${acimadamedia} | Maior nota: ${maiornota} | Posicao: ${posicao}`;
+
+        result.textContent = `${resultado}`;
 
 
       }

@@ -20,9 +20,9 @@
             <input type="text" id="idValores">
           </div>
 
-          <button type="button" onclick="recebaValor()">Envie o valor</button>
+          <button type="button" id="recebevalor"">Envie o valor</button>
 
-          <button type="button" onclick="resposta()">clique aqui</button>
+          <button type="button" id="resposta">clique aqui</button>
           <div class="divInputOutput">
             <label for="idRaio"></label>
             <p id="idResult"></p>
@@ -34,13 +34,19 @@
     <script>
       var recebendo = []
 
+      var botaorecebavalor = document.querySelector("#recebevalor");
+      var resposta = document.querySelector("#resposta");
+
+      botaorecebavalor.addEventListener("click", recebaValor);
+
       function recebaValor() {
         var valorDigitado = document.querySelector("#idValores").value;
         recebendo.push(Number(valorDigitado));
         document.querySelector("#idValores").value = "";
           // Adicione o valor ao array
       }
-      function resposta() {
+      
+      resposta.onclick = function() {
         let result = document.querySelector('#idResult');
 
 
