@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="assets/CSS/style9.css" />
+  <title>Ex02</title>
+</head>
+
+<body class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3" >
+
+  <header></header>
+  <main>
+    <div >
+      <form >
+        <fieldset role="button" tabindex="0">
+          <legend>Exe02</legend>
+          <div class="divInputOutput">
+            <label for="idNome">Digite o nome :</label>
+            <input  type="text" id="idNome">
+          </div>
+          <div class="divInputOutput">
+            <label for="idIdade">Digite a Idde:</label>
+            <input type="text" id="idIdade">
+          </div>
+
+          <button type="button" id="idRecebervalor">Envie o valor</button>
+
+          <div class="container" id="idResult">
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script>
+      const pessoas = []
+      const botaorecebavalor = document.querySelector("#idRecebervalor");
+      const result = document.querySelector("#idResult");
+      botaorecebavalor.addEventListener("click", function () {
+        if (pessoas.length < 9) {
+          const valorNome = document.querySelector("#idNome").value;
+
+          const valorIdade = document.querySelector("#idIdade").value;
+
+          const pessoa = {
+            nome: valorNome,
+            idade: valorIdade
+          }
+          pessoas.push(pessoa);
+          console.log(pessoas);
+        } else {
+          console.log("Chegou no limite");
+
+          const mIdade = pessoas.filter(function (pessoa) {
+            return pessoa.idade <= 18;
+
+          })
+
+          mIdade.map(function (pessoa) {
+            let ul = document.createElement("ul")
+            let li = document.createElement("li")
+            ul.className = "list-group"
+            li.className = "list-group-item"
+            li.innerText = pessoa.nome + " " + pessoa.idade
+            result.appendChild(ul)
+            ul.appendChild(li)
+          })
+
+
+          frutas.map(function (fruta, index) {
+      let opcao = document.createElement("option")
+      opcao.innerText = index + " " + fruta
+      opcao.id = "idFruta" + index
+      datalist.appendChild(opcao)
+    })
+
+          console.log(mIdade);
+        }
+      })
+
+
+
+    </script>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
