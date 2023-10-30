@@ -1,0 +1,72 @@
+<!--
+    Programa: criacao de uma lista de frutas
+    Descrição:
+
+    O programa recebe uma lista de frutas e mostra em um input
+    Autor: Joniclei B. Jr
+    Data: 29.10.2023
+
+    Histórico de Alterações:
+     V |   Data   | Autor/Descrição
+    ----------------------------------------------------------------------------
+     0 | 29.10.23 | Joniclei B. Jr - Versão inicial
+       |          | Criação do Programa
+    ----------------------------------------------------------------------------
+     1 | 29.10.23 | Joniclei B. Jr - Versão inicia
+       |          | Vetor com frutas e feito um for each para mostrar no input
+    ----------------------------------------------------------------------------
+
+-->
+
+<!-- Análise (Rascunho...)
+-----------------
+    entradas:
+    - Lista de frutas(lista 8 exercicio 1)
+    - 1 input com a lista de frutas
+
+    processamento:
+    - input com uma lista de frutas
+
+    saídas:
+    somente mostra no input a lista de frutas
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio01</title>
+</head>
+
+<body>
+
+
+  <div>
+    <h1> Lista de frutas</h1>
+  </div>
+  <div>
+
+    <label for="idFrutas"> Frutas:</label>
+    <input list="idFrutas">
+    <datalist id="idFrutas">
+    </datalist>
+  </div>
+  <script>
+
+    var frutas = ["tomate", "morango", "limão", "Abacaxi", "Pêra", "Uva"]
+    let datalist = document.getElementById("idFrutas")
+
+    frutas.forEach(function (element, index) {
+      let option = document.createElement("option")
+      option.innerText = index + " " + element
+      option.id = "idFruta" + index
+
+      datalist.appendChild(option)
+    })
+  </script>
+</body>
+
+</html>
